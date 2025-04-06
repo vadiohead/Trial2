@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Lesson2_2">
+
+    <TextView
+        android:id="@+id/task"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/yellow"
+        android:text="@string/translateSentence"
+        android:textColor="#041690"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/clause"
+        android:layout_width="358dp"
+        android:layout_height="84dp"
+        android:layout_marginBottom="30dp"
+        android:text="Ши нүхэртэйш"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toTopOf="@id/ResponseField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/ResponseField"
+        android:layout_width="358dp"
+        android:layout_height="100dp"
+        android:textSize="28dp"
+        app:layout_constraintStart_toStartOf="@id/AnswerField"
+        app:layout_constraintBottom_toTopOf="@id/AnswerField" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/AnswerField"
+        android:layout_width="358dp"
+        android:layout_height="316dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_oval"
+            android:onClick="buttonClick"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="5dp"
+            android:text="друг"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_oval"
+            android:onClick="buttonClick"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="5dp"
+            android:text="есть"
+            app:layout_constraintStart_toEndOf="@id/btn1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_oval"
+            android:onClick="buttonClick"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="5dp"
+            android:text="кот"
+            app:layout_constraintStart_toEndOf="@id/btn2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_oval"
+            android:onClick="buttonClick"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="5dp"
+            android:text="тебя"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn1" />
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_oval"
+            android:onClick="buttonClick"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="5dp"
+            android:text="У"
+            app:layout_constraintStart_toEndOf="@id/btn4"
+            app:layout_constraintTop_toBottomOf="@id/btn1" />
+
+        <Button
+            android:id="@+id/btn6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_oval"
+            android:onClick="buttonClick"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="5dp"
+            android:text="дерево"
+            app:layout_constraintStart_toEndOf="@id/btn5"
+            app:layout_constraintTop_toBottomOf="@id/btn1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/response"
+        android:layout_width="441dp"
+        android:layout_height="160dp"
+        android:background="@drawable/gainsboro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/mark"
+            android:layout_width="58dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="7dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/tick_mark" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="20dp"
+            android:text="Верно!"
+            android:textSize="25dp"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@+id/mark"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:text="Правильный ответ: У тебя есть друг."
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/check"
+        android:layout_width="345dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="onClickCheck"
+        android:text="@string/check"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/showHint"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="156dp"
+        android:onClick="showHintToggle"
+        android:text="@string/emptyString"
+        android:visibility="visible"
+        android:alpha="0"
+        app:layout_constraintStart_toStartOf="@+id/clause"
+        app:layout_constraintTop_toTopOf="@+id/clause" />
+
+    <Button
+        android:id="@+id/showHint2"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="156dp"
+        android:onClick="showHintToggle2"
+        android:text="@string/emptyString"
+        android:visibility="visible"
+        android:alpha="0"
+        app:layout_constraintStart_toEndOf="@+id/showHint"
+        app:layout_constraintTop_toTopOf="@+id/clause" />
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-30dp"
+        android:layout_marginEnd="7dp"
+        android:text="ты"
+        android:textSize="24dp"
+        android:textAlignment="center"
+        android:background="@drawable/hint"
+        app:layout_constraintStart_toStartOf="@+id/clause"
+        app:layout_constraintTop_toBottomOf="@+id/clause" />
+
+    <TextView
+        android:id="@+id/hint2"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-30dp"
+        android:text="у тебя есть друг"
+        android:textSize="24dp"
+        android:textAlignment="center"
+        android:background="@drawable/hint"
+        app:layout_constraintStart_toEndOf="@id/hint"
+        app:layout_constraintTop_toBottomOf="@+id/clause" />
+
+    <Button
+        android:id="@+id/clearButton"
+        android:background="@drawable/return_button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:onClick="clear"
+        app:srcCompat="@drawable/return_button"
+        app:layout_constraintBottom_toTopOf="@id/ResponseField"
+        app:layout_constraintEnd_toEndOf="@id/ResponseField" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

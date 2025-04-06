@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Lesson2_2">
+
+    <TextView
+        android:id="@+id/task"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/yellow"
+        android:text="@string/translateSentence"
+        android:textColor="#041690"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/ResponseField"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="28dp"
+        app:layout_constraintStart_toStartOf="@id/AnswerField"
+        app:layout_constraintBottom_toTopOf="@id/AnswerField" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/AnswerField"
+        android:layout_width="358dp"
+        android:layout_height="316dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:minWidth="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_oval"
+            android:onClick="buttonClick"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="5dp"
+            android:text="книга"
+            android:textAllCaps="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:minWidth="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_oval"
+            android:onClick="buttonClick"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="5dp"
+            android:text="нас"
+            android:textAllCaps="false"
+            app:layout_constraintStart_toEndOf="@id/btn1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="wrap_content"
+            android:minWidth="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_oval"
+            android:onClick="buttonClick"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="5dp"
+            android:text="есть"
+            android:textAllCaps="false"
+            app:layout_constraintStart_toEndOf="@id/btn2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="wrap_content"
+            android:minWidth="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_oval"
+            android:onClick="buttonClick"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="5dp"
+            android:text="и"
+            android:textAllCaps="false"
+            app:layout_constraintStart_toEndOf="@id/btn3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- nextLine -->
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="wrap_content"
+            android:minWidth="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_oval"
+            android:onClick="buttonClick"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="5dp"
+            android:text="У"
+            android:textAllCaps="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn1" />
+
+        <Button
+            android:id="@+id/btn6"
+            android:layout_width="wrap_content"
+            android:minWidth="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_oval"
+            android:onClick="buttonClick"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="5dp"
+            android:text="них"
+            android:textAllCaps="false"
+            app:layout_constraintStart_toEndOf="@id/btn5"
+            app:layout_constraintTop_toBottomOf="@id/btn1" />
+
+        <Button
+            android:id="@+id/btn7"
+            android:layout_width="wrap_content"
+            android:minWidth="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_oval"
+            android:onClick="buttonClick"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="5dp"
+            android:text="большое"
+            android:textAllCaps="false"
+            app:layout_constraintStart_toEndOf="@id/btn6"
+            app:layout_constraintTop_toBottomOf="@id/btn1" />
+
+        <Button
+            android:id="@+id/btn8"
+            android:layout_width="wrap_content"
+            android:minWidth="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_oval"
+            android:onClick="buttonClick"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="5dp"
+            android:text="письмо"
+            android:textAllCaps="false"
+            app:layout_constraintStart_toEndOf="@id/btn7"
+            app:layout_constraintTop_toBottomOf="@id/btn1" />
+
+        <!-- nextLine -->
+
+        <Button
+            android:id="@+id/btn9"
+            android:layout_width="wrap_content"
+            android:minWidth="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_oval"
+            android:onClick="buttonClick"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="5dp"
+            android:text="и"
+            android:textAllCaps="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn5" />
+
+        <Button
+            android:id="@+id/btn10"
+            android:layout_width="wrap_content"
+            android:minWidth="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_oval"
+            android:onClick="buttonClick"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="5dp"
+            android:text="овца"
+            android:textAllCaps="false"
+            app:layout_constraintStart_toEndOf="@id/btn9"
+            app:layout_constraintTop_toBottomOf="@id/btn5" />
+
+        <Button
+            android:id="@+id/btn11"
+            android:layout_width="wrap_content"
+            android:minWidth="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_oval"
+            android:onClick="buttonClick"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="5dp"
+            android:text="есть"
+            android:textAllCaps="false"
+            app:layout_constraintStart_toEndOf="@id/btn10"
+            app:layout_constraintTop_toBottomOf="@id/btn5" />
+
+        <Button
+            android:id="@+id/btn12"
+            android:layout_width="wrap_content"
+            android:minWidth="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_oval"
+            android:onClick="buttonClick"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="5dp"
+            android:text="у"
+            android:textAllCaps="false"
+            app:layout_constraintStart_toEndOf="@id/btn11"
+            app:layout_constraintTop_toBottomOf="@id/btn5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/response"
+        android:layout_width="441dp"
+        android:layout_height="160dp"
+        android:background="@drawable/gainsboro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/mark"
+            android:layout_width="58dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="7dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/tick_mark" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="20dp"
+            android:text="Верно!"
+            android:textSize="25dp"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@+id/mark"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:text="Правильный ответ: У нас есть книга."
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/check"
+        android:layout_width="345dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="onClickCheck"
+        android:text="@string/check"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clause"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/task" >
+
+        <Button
+            android:id="@+id/showHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_button"
+            android:fontFamily="@font/roboto_regular"
+            android:minWidth="10dp"
+            android:onClick="showHintToggle"
+            android:text=" Бидэ "
+            android:textAllCaps="false"
+            android:textSize="25dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/showHint2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_button"
+            android:fontFamily="@font/roboto_regular"
+            android:minWidth="10dp"
+            android:onClick="showHintToggle2"
+            android:text=" номтойбди "
+            android:textAllCaps="false"
+            android:textSize="25dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/showHint" />
+
+        <Button
+            android:id="@+id/showHint3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_button"
+            android:fontFamily="@font/roboto_regular"
+            android:minWidth="10dp"
+            android:onClick="showHintToggle3"
+            android:text=" ба "
+            android:textAllCaps="false"
+            android:textSize="25dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/showHint2" />
+
+        <Button
+            android:id="@+id/showHint4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_button"
+            android:fontFamily="@font/roboto_regular"
+            android:minWidth="10dp"
+            android:onClick="showHintToggle4"
+            android:text=" тэдэ "
+            android:textAllCaps="false"
+            android:textSize="25dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/showHint3" />
+
+        <!-- nextLine -->
+
+        <Button
+            android:id="@+id/showHint5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_button"
+            android:fontFamily="@font/roboto_regular"
+            android:minWidth="10dp"
+            android:onClick="showHintToggle5"
+            android:text=" ехэ "
+            android:textAllCaps="false"
+            android:textSize="25dp"
+            app:layout_constraintTop_toBottomOf="@id/showHint"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/showHint6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_button"
+            android:fontFamily="@font/roboto_regular"
+            android:minWidth="10dp"
+            android:onClick="showHintToggle6"
+            android:text=" бэшэгтэй "
+            android:textAllCaps="false"
+            android:textSize="25dp"
+            app:layout_constraintTop_toBottomOf="@id/showHint"
+            app:layout_constraintStart_toEndOf="@id/showHint5" />
+
+        <Button
+            android:id="@+id/showHint7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_button"
+            android:fontFamily="@font/roboto_regular"
+            android:minWidth="10dp"
+            android:onClick="showHintToggle7"
+            android:text=" ба "
+            android:textAllCaps="false"
+            android:textSize="25dp"
+            app:layout_constraintTop_toBottomOf="@id/showHint"
+            app:layout_constraintStart_toEndOf="@id/showHint6" />
+
+        <Button
+            android:id="@+id/showHint8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_button"
+            android:fontFamily="@font/roboto_regular"
+            android:minWidth="10dp"
+            android:onClick="showHintToggle8"
+            android:text=" хонинтой "
+            android:textAllCaps="false"
+            android:textSize="25dp"
+            app:layout_constraintTop_toBottomOf="@id/showHint"
+            app:layout_constraintStart_toEndOf="@id/showHint7" />
+
+        <!--   hints   -->
+        <!--   hints   -->
+        <!--   hints   -->
+
+        <TextView
+            android:id="@+id/hint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/hint"
+            android:text="мы"
+            android:textAlignment="center"
+            android:textSize="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/showHint"
+            app:layout_constraintStart_toStartOf="@id/showHint"
+            app:layout_constraintEnd_toEndOf="@+id/showHint"/>
+
+        <TextView
+            android:id="@+id/hint2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/hint"
+            android:text="у нас есть книга"
+            android:textAlignment="center"
+            android:textSize="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/showHint2"
+            app:layout_constraintStart_toStartOf="@id/showHint2"
+            app:layout_constraintEnd_toEndOf="@id/showHint2"/>
+
+        <TextView
+            android:id="@+id/hint3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/hint"
+            android:text="и"
+            android:textAlignment="center"
+            android:textSize="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/showHint3"
+            app:layout_constraintStart_toStartOf="@id/showHint3"
+            app:layout_constraintEnd_toEndOf="@id/showHint3"/>
+
+        <TextView
+            android:id="@+id/hint4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/hint"
+            android:text="они"
+            android:textAlignment="center"
+            android:textSize="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/showHint4"
+            app:layout_constraintStart_toStartOf="@id/showHint4"
+            app:layout_constraintEnd_toEndOf="@id/showHint4"/>
+
+        <!-- nextLine -->
+
+        <TextView
+            android:id="@+id/hint5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/hint"
+            android:text="большой"
+            android:textAlignment="center"
+            android:textSize="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/showHint5"
+            app:layout_constraintStart_toStartOf="@id/showHint5"
+            app:layout_constraintEnd_toEndOf="@id/showHint5"/>
+
+        <TextView
+            android:id="@+id/hint6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/hint"
+            android:text="у них есть письмо"
+            android:textAlignment="center"
+            android:textSize="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/showHint6"
+            app:layout_constraintStart_toStartOf="@id/showHint6"
+            app:layout_constraintEnd_toEndOf="@id/showHint6"/>
+
+        <TextView
+            android:id="@+id/hint7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/hint"
+            android:text="и"
+            android:textAlignment="center"
+            android:textSize="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/showHint7"
+            app:layout_constraintStart_toStartOf="@id/showHint7"
+            app:layout_constraintEnd_toEndOf="@id/showHint7"/>
+
+        <TextView
+            android:id="@+id/hint8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/hint"
+            android:text="у них есть овца"
+            android:textAlignment="center"
+            android:textSize="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/showHint8"
+            app:layout_constraintStart_toStartOf="@id/showHint8"
+            app:layout_constraintEnd_toEndOf="@id/showHint8"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/clearButton"
+        android:background="@drawable/return_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="clear"
+        app:srcCompat="@drawable/return_button"
+        app:layout_constraintBottom_toTopOf="@id/ResponseField"
+        app:layout_constraintEnd_toEndOf="@id/ResponseField" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
